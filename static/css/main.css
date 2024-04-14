@@ -1,0 +1,118 @@
+*{
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background: black;
+    color: snow;
+}
+nav{
+    width: 100%;
+    text-align: right;
+}
+button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.data-bar{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.data-bar input{
+    height: fit-content;
+    margin: auto;
+    width: 20%;
+    padding: 0 10px;
+}
+table{
+    width: 100%;
+    border: 1px solid snow;
+    font-size: 10px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.emp-data{
+    overflow-y: scroll;
+    height: 81vh;
+}
+table thead tr th{
+    top: -5px;
+    background-color: black;
+    border: 5px solid snow;
+    position: sticky;
+}
+table thead tr th{
+    padding: 10px 0;
+    font-size: 20px;
+}
+table tr td{
+    padding: 5px 0;
+    font-size: 13px;
+}
+table tr th,td{
+    border: 1px solid snow;
+}
+table button{
+    width: 100px;
+    font-size: 13px;
+    padding: 5px 0px;
+    margin: 0 10px;
+}
+table #operations{
+    width: 20%;
+}
+.profile{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.profile-form{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    padding: 2%;
+    padding-top: 5%;
+    border-radius: 10px;
+    border: 1px solid snow;
+    text-align: center;
+    margin-top: 10%;
+    background-color: black;
+}
+.profile-form button{
+    margin: 0 auto;
+}
+.profile-form div{
+    width: 100%;
+    margin: 5% 0;
+    text-align: left;
+}
+input{
+    width: 50%;
+}
+label{
+    width: 50%;
+}
+.x{
+    position: absolute;
+    margin-right: 2%;
+    padding: 5px;
+    cursor: pointer;
+}
+#close_x{
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 27%;
+}
+

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMP - APP</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload="load_employee()">
+    {% csrf_token %}
+    <nav>
+        <button onclick="test()">Test</button>
+        <button onclick="create()">Create Employee</button>
+        <a href="/reset"><button>RESET</button></a>
+    </nav>
+    <div class="profile">
+        <div class="profile-form">
+            <div id="close_x"><button id="x" onclick="close_x()">X</button></div>
+            <div>
+                <label for="emp-name">Employee Name </label>
+                <input type="text" name="emp-name" id="emp-name" oninput="check_emp_name()" placeholder="Name">
+            </div>
+            <div>
+                <label for="emp-age">Employee Age </label>
+                <input type="number" name="emp-age" id="emp-age" min="1" max="150" placeholder="Age">
+            </div>
+            <button class="create_emp" onclick="create_emp()">Create</button>
+            <button class="update_emp" onclick="update_emp(this.id)">Update</button>
+        </div>
+    </div>
+    <div class="data-bar">
+        <p id="total-employee">Total Employee - <span id="total-emp"></span></p>
+        <input type="text" name="search" id="search" oninput="search_employee(this.value)" placeholder="Search employee...">
+    </div>
+    <div class="emp-data">
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Code</th>
+                    <th>Employee Name</th>
+                    <th>Employee Age</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody id="employee-data">
+            </tbody>
+        </table>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
